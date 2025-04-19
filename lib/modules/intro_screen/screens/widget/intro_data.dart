@@ -1,0 +1,31 @@
+class IntroData {
+  final String image;
+  final String text;
+  final String subtext;
+
+  IntroData(this.image, this.text, this.subtext);
+}
+
+List<IntroData> introData = [
+  IntroData("assets/logos/welcome.png", "Welcome To Islmi App", ""),
+  IntroData(
+    "assets/logos/kabba.png",
+    "Welcome To Islami",
+    "We Are Very Excited To Have You In Our Community",
+  ),
+  IntroData(
+    "assets/logos/Group.png",
+    "Reading the Quran",
+    "Read, and your Lord is the Most Generous",
+  ),
+  IntroData(
+    "assets/logos/bearish.png",
+    "Bearish",
+    "Praise the name of your Lord, the Most High",
+  ),
+  IntroData(
+    "assets/logos/radio.png",
+    "Holy Quran Radio",
+    "You can listen to the Holy Quran Radio through the application for free and easily",
+  ),
+];

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import '../../../core/models/sura_data.dart';
 import '../../../core/theme/app_color/app_colors.dart';
 
