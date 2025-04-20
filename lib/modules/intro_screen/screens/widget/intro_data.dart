@@ -7,24 +7,24 @@ class IntroData {
 }
 
 List<IntroData> introData = [
-  IntroData("assets/logos/welcome.png", "Welcome To Islmi App", ""),
+  IntroData("assets/images/welcome.png", "Welcome To Islmi App", ""),
   IntroData(
-    "assets/logos/kabba.png",
+    "assets/images/kabba.png",
     "Welcome To Islami",
     "We Are Very Excited To Have You In Our Community",
   ),
   IntroData(
-    "assets/logos/Group.png",
+    "assets/images/Group.png",
     "Reading the Quran",
     "Read, and your Lord is the Most Generous",
   ),
   IntroData(
-    "assets/logos/bearish.png",
+    "assets/images/bearish.png",
     "Bearish",
     "Praise the name of your Lord, the Most High",
   ),
   IntroData(
-    "assets/logos/radio.png",
+    "assets/images/radio.png",
     "Holy Quran Radio",
     "You can listen to the Holy Quran Radio through the application for free and easily",
   ),

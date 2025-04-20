@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:islami/core/theme/app_color/app_colors.dart';
 
-class SebhaScreen extends StatelessWidget {
+class SebhaScreen extends StatefulWidget {
   const SebhaScreen({super.key});
 
   @override
+  State<SebhaScreen> createState() => _SebhaScreenState();
+}
+
+class _SebhaScreenState extends State<SebhaScreen> {
+  double angle = 0;
+  int counter = 0;
+  int index = 0;
+
+  List<String> azkar = ['سبحان الله', 'الحمد لله', 'الله أكبر'];
+
+  @override
   Widget build(BuildContext context) {
+    var screenHeight = MediaQuery.of(context).size.height;
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(
@@ -23,15 +34,61 @@ class SebhaScreen extends StatelessWidget {
               child: Text(
                 "سَبِّحِ اسْمَ رَبِّكَ الأعلى ",
                 style: TextStyle(
-                  color: AppColors.gold,
+                  color: Colors.white,
                   fontSize: 36,
                   fontWeight: FontWeight.w700,
                 ),
               ),
             ),
+            Stack(
+              children: [
+                Column(
+                  children: [
+                    Image.asset("assets/images/seb7a_head.png"),
+                    Transform.rotate(
+                      angle: angle,
+                      child: Image.asset("assets/images/sebha_body.png"),
+                    ),
+                  ],
+                ),
+                Positioned(
+                  top: screenHeight * 0.25,
+                  left: 140,
+                  child: GestureDetector(
+                    onTap: () => _onclick(),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          azkar[index],
+                          style: TextStyle(color: Colors.white, fontSize: 36),
+                        ),
+                        Text(
+                          "$counter",
+                          style: TextStyle(color: Colors.white, fontSize: 36),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
     );
+  }
+
+  void _onclick() {
+    angle += 270;
+    counter++;
+    if (counter == 34) {
+      counter = 0;
+      if (index == azkar.length - 1) {
+        index = 0;
+      }
+      index++;
+    }
+    setState(() {});
   }
 }

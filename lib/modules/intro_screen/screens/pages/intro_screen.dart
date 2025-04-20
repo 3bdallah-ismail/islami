@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/modules/intro_screen/screens/widget/intro_card.dart';
 
+import '../../../../core/routes/app_routes_name.dart';
 import '../widget/intro_data.dart';
 
 class IntroScreen extends StatefulWidget {
@@ -86,6 +87,13 @@ class _IntroScreenState extends State<IntroScreen> {
                       _pageController.nextPage(
                         duration: Duration(milliseconds: 300),
                         curve: Curves.ease,
+                      );
+                    }
+                    if (index == 4) {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        AppRoutesName.layout,
+                        (route) => false,
                       );
                     }
                   },
