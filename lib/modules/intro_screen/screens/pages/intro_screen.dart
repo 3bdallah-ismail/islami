@@ -52,40 +52,43 @@ class _IntroScreenState extends State<IntroScreen> {
             Row(
               children: [
                 index == 0
-                    ? SizedBox()
+                    ? const SizedBox()
                     : TextButton(
                       onPressed: () {
                         if (index > 0) {
                           _pageController.previousPage(
-                            duration: Duration(milliseconds: 300),
+                            duration: const Duration(milliseconds: 300),
                             curve: Curves.ease,
                           );
                         }
                       },
-                      child: Text(
+                      child: const Text(
                         "Back",
                         style: TextStyle(color: Color(0xffFFD482)),
                       ),
                     ),
-                Spacer(),
+                const Spacer(),
                 ...[0, 1, 2, 3, 4].map((e) {
                   return AnimatedContainer(
-                    duration: Duration(milliseconds: 400),
+                    duration: const Duration(milliseconds: 400),
                     height: 8,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: e == index ? Color(0xffFFD482) : Color(0xff707070),
+                      color:
+                          e == index
+                              ? const Color(0xffFFD482)
+                              : const Color(0xff707070),
                     ),
-                    margin: EdgeInsets.all(4),
+                    margin: const EdgeInsets.all(4),
                     width: e == index ? 30 : 10,
                   );
                 }),
-                Spacer(),
+                const Spacer(),
                 TextButton(
                   onPressed: () {
                     if (index < 4) {
                       _pageController.nextPage(
-                        duration: Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 300),
                         curve: Curves.ease,
                       );
                     }
@@ -99,7 +102,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   },
                   child: Text(
                     index == 4 ? "Finish" : "Next",
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Color(0xffFFD482),
                       fontSize: 16,
                       fontWeight: FontWeight.w700,

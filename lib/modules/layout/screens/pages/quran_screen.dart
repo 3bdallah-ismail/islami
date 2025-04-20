@@ -49,7 +49,7 @@ class _QuranScreenState extends State<QuranScreen> {
             children: [
               Center(child: Image.asset("assets/logos/home_logo.png")),
               TextFormField(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
@@ -59,7 +59,7 @@ class _QuranScreenState extends State<QuranScreen> {
                 },
                 decoration: InputDecoration(
                   hintText: "Sura Name",
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
@@ -73,15 +73,15 @@ class _QuranScreenState extends State<QuranScreen> {
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide(color: AppColors.gold),
+                    borderSide: const BorderSide(color: AppColors.gold),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide(color: AppColors.gold),
+                    borderSide: const BorderSide(color: AppColors.gold),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide(color: AppColors.gold),
+                    borderSide: const BorderSide(color: AppColors.gold),
                   ),
                 ),
               ),

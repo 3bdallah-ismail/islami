@@ -16,7 +16,6 @@ class _SebhaScreenState extends State<SebhaScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var screenHeight = MediaQuery.of(context).size.height;
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(
@@ -29,8 +28,8 @@ class _SebhaScreenState extends State<SebhaScreen> {
         child: Column(
           children: [
             Image.asset("assets/logos/home_logo.png"),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 "سَبِّحِ اسْمَ رَبِّكَ الأعلى ",
                 style: TextStyle(
@@ -51,9 +50,8 @@ class _SebhaScreenState extends State<SebhaScreen> {
                     ),
                   ],
                 ),
-                Positioned(
-                  top: screenHeight * 0.25,
-                  left: 140,
+                Positioned.fill(
+                  top: 100,
                   child: GestureDetector(
                     onTap: () => _onclick(),
                     child: Column(
@@ -61,11 +59,17 @@ class _SebhaScreenState extends State<SebhaScreen> {
                       children: [
                         Text(
                           azkar[index],
-                          style: TextStyle(color: Colors.white, fontSize: 36),
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 36,
+                          ),
                         ),
                         Text(
                           "$counter",
-                          style: TextStyle(color: Colors.white, fontSize: 36),
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 36,
+                          ),
                         ),
                       ],
                     ),

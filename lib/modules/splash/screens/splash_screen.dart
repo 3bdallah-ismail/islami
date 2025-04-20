@@ -43,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Stack(
       children: [
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/logos/splash_bg.png"),
               fit: BoxFit.cover,
@@ -59,12 +59,12 @@ class _SplashScreenState extends State<SplashScreen> {
                 children: [
                   SafeArea(
                     child: ZoomIn(
-                      duration: Duration(seconds: 1),
+                      duration: const Duration(seconds: 1),
                       child: Image.asset("assets/logos/splash_logo.png"),
                     ),
                   ),
                   FadeInDown(
-                    duration: Duration(seconds: 1),
+                    duration: const Duration(seconds: 1),
                     child: Image.asset("assets/logos/Glow.png"),
                   ),
                 ],
@@ -72,13 +72,13 @@ class _SplashScreenState extends State<SplashScreen> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: SlideInLeft(
-                  delay: Duration(seconds: 2),
+                  delay: const Duration(seconds: 2),
                   child: Image.asset("assets/logos/left.png"),
                 ),
               ),
               Expanded(
                 child: ZoomIn(
-                  duration: Duration(seconds: 1),
+                  duration: const Duration(seconds: 1),
                   child: SizedBox(
                     width: 100,
                     child: Image.asset(
@@ -91,14 +91,14 @@ class _SplashScreenState extends State<SplashScreen> {
               Align(
                 alignment: Alignment.centerRight,
                 child: SlideInRight(
-                  delay: Duration(seconds: 2),
+                  delay: const Duration(seconds: 2),
                   child: Image.asset("assets/logos/right.png"),
                 ),
               ),
               ElasticIn(
                 child: ElasticIn(
-                  delay: Duration(seconds: 2),
-                  child: Image(
+                  delay: const Duration(seconds: 2),
+                  child: const Image(
                     image: AssetImage("assets/logos/logo_route.png"),
                     width: 300,
                   ),
